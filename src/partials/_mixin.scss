@@ -1,0 +1,23 @@
+@mixin Flexible ($display:null, $justify-cont:null, $f-wrap:null, $align-itm:null) {
+    display: $display;
+    justify-content: $justify-cont;
+    flex-wrap: $f-wrap;
+    align-items: $align-itm;
+    
+    
+}
+
+@mixin Image ($width, $height:null, $object_fit)
+{
+    width: $width;
+    height: $height;
+    object-fit: $object_fit;
+}
+
+@mixin Font ($family:null, $size:null, $f-weight:null, $l-height:null)
+{
+    font-family: $family;
+    font-size: $size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+}

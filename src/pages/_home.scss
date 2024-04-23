@@ -1,0 +1,158 @@
+.banner {
+    .background {      
+        background-size: cover;
+        background-position: center;
+
+        .overley {
+            padding: 0 12px;
+            background-color: $clr_overley;
+
+            .heading {
+                max-width: 516px;
+                padding: 120px 0;                
+                margin: auto;
+                text-align: center;
+                color: #fff;
+                transition: 0.3s;
+
+                @media(min-width:768px)
+                {
+                    padding: 200px 0;
+                }
+
+                .banner_stitle {
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin: 0 0 20px;
+                }
+
+                .banner_ltitle {
+                    font-size: 47px;
+                    line-height: 46px;
+                    margin: 0 0 15px;
+                }
+
+                .banner_btn {
+
+                    margin: 35px 0 0;
+                }
+
+
+            }
+        }
+
+
+    }
+
+}
+
+.services {
+    margin: 120px 0;
+
+    .wrapper {
+        max-width: 1140px;
+        margin: auto;
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            
+
+            .card {
+                width: calc(25% - 30px);
+                position: relative;
+                margin: 15px;
+                border: 2px solid $clr_arrow_back;
+                border-radius: 5px;
+                overflow: hidden;
+                transition: all 0.3s;
+
+                &:hover {
+                    .second_card {
+                        opacity: 1;
+                        transform: scale(1);
+
+                    }
+                }
+
+                .main_card {
+
+                    padding: 24px 20px;
+
+                    .icon {
+
+                        span {
+                            font-size: 80px;
+                            color: $clr_main;
+                        }
+                    }
+
+                    .text {
+                        margin: 16px 0 21px;
+
+
+                        h4,
+                        p {
+                            font-size: 16px;
+                        }
+
+                    }
+
+                    .arrow {
+                        padding: 6px 0 0;
+
+                        .arrow_back {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            background-color: $clr_arrow_back;
+                            color: $clr_main;
+
+                            span {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .second_card {
+                    position: absolute;
+                    padding: 37px 27px;
+                    inset: 0;
+                    opacity: 0;
+                    background-color: $clr_main;
+                    color: #fff;
+                    transform: scale(1.5);
+                    transition: 0.5s;
+
+                    h4 {
+                        font-size: 22px;
+                        margin: 0 0 16px
+                    }
+
+                    .btn_card {
+                        @extend %btn;
+                        background-color: $clr_third;
+                        margin: 20px 0 0;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+
+
+                @media (min-width: 320px) and (max-width:768px) {
+                    width: 100%;
+                }
+
+                @media (min-width: 769px) and (max-width:1024px) {
+                    width: calc(50% - 30px);
+                }
+            }
+
+
+        }
+    }
+}

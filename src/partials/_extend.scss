@@ -1,0 +1,40 @@
+%btn {
+    padding: 20px 30px;
+    width: max-content;
+    background-color: $clr_main;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $clr_second;
+    }
+}
+
+%sub_menu {
+    width: 190px;
+    position: absolute;
+    visibility: hidden;
+    background-color: #fff;
+    opacity: 0;
+    transition: all .3s;
+
+    li {
+        border-bottom: 1px solid #c0bfbf6e;
+
+        a {
+            display: block;
+            padding: 15px 10px;
+            @include Font($f-weight: 500);
+
+            &:hover {
+                background-color: $clr_main;
+                color: #fff;
+            }
+        }
+    }
+}
